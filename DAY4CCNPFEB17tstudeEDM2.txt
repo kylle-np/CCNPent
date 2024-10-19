@@ -1,4 +1,4 @@
-@@@ CONFIGURE RST AGAIN.
+   @@@ CONFIGURE RST AGAIN.
 D1:
 CONFIG T
 ip dhcp excluded-add 10.2.1.1 10.2.1.99
@@ -352,6 +352,24 @@ IPV6 ADDRESSING FOR THE ISP'S
 		int e1/1
 			ipv6 add b:1:11:b::1/64
 			end
+
+@R2
+	config t
+		ipv6 unicast-routing
+		int e1/3
+			ipv6 add b:1:33:b::1/64
+		int e1/2
+			ipv6 add b:1:22:b::1/64
+		int e1/1
+			ipv6 add b:1:11:b::1/64
+			end
+
+
+
+
+
+
+
                 ###################
 				~~~~~~~~~~~~~~~~~~~~~~~~~IPV6 BGP Configuration~~~~~~~~~~~~~~~~~~~~~~~
 @ISP4
